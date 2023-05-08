@@ -24,11 +24,16 @@
  
 }
 .result>span{
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 600;
+  margin-top: 60px;
+  display: block;
+}
+.result>div{
+  margin-top: 100px;
 }
 .result>div>p{
-  font-size: 20px;
+  font-size: 30px;
 }
 .img-upload>img, .img-detect>img{
   width: 500px;
