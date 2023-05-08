@@ -15,6 +15,21 @@
   flex-direction: column;
   align-items: center;
 }
+.result{
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+  position: relative;
+  top: -42px;
+ 
+}
+.result>span{
+  font-size: 25px;
+  font-weight: 600;
+}
+.result>div>p{
+  font-size: 20px;
+}
 .img-upload>img, .img-detect>img{
   width: 500px;
   height: 500px;
@@ -22,7 +37,7 @@
   border: 1px solid #000;
   object-fit: contain;
 }
-.img-upload>button, .detect-btn>button{
+.img-upload>button, .detect-btn>button, .result>button{
   margin-top: 30px;
   width: 300px;
   height: 50px;
