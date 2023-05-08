@@ -26,11 +26,11 @@
 .result>span{
   font-size: 35px;
   font-weight: 600;
-  margin-top: 60px;
+  margin-top: 40px;
   display: block;
 }
 .result>div{
-  margin-top: 100px;
+  margin-top: 20px;
 }
 .result>div>p{
   font-size: 30px;

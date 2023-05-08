@@ -46,6 +46,7 @@ function App() {
         setCount(null);
         setQuality(null);
     };
+    console.log(count);
     return (
         <div className="app">
             <Header />
@@ -65,23 +66,35 @@ function App() {
                     </div>
                     <div className="result">
                         <span>Kết quả</span>
-                        {count && (
+                        {count && Object.keys(count).length === 0 ? (
                             <div>
-                                {count[0] === undefined ? '' : <p>- có {count[0]} táo đỏ</p>}
-                                {count[1] === undefined ? '' : <p>- có {count[1]} táo xanh</p>}
-                                {count[2] === undefined ? '' : <p>- có {count[2]} chùm nho xanh</p>}
-                                {count[3] === undefined ? '' : <p>- có {count[3]} chùm nho đen</p>}
+                                <p>Không phát hiện được đối tượng</p>
                             </div>
+                        ) : (
+                            count && (
+                                <div>
+                                    {count[0] === undefined ? '' : <p>- có {count[0]} táo đỏ</p>}
+                                    {count[1] === undefined ? '' : <p>- có {count[1]} táo xanh</p>}
+                                    {count[2] === undefined ? '' : <p>- có {count[2]} chùm nho xanh</p>}
+                                    {count[3] === undefined ? '' : <p>- có {count[3]} chùm nho đen</p>}
+                                </div>
+                            )
                         )}
-                        {quality && (
+                        {quality && Object.keys(quality).length === 0 ? (
                             <div>
-                                {quality[0] === undefined ? '' : <p>- có {quality[0]} táo hư</p>}
-                                {quality[1] === undefined ? '' : <p>- có {quality[1]} chuối hư</p>}
-                                {quality[2] === undefined ? '' : <p>- có {quality[2]} cam hư</p>}
-                                {quality[3] === undefined ? '' : <p>- có {quality[3]} táo tốt</p>}
-                                {quality[4] === undefined ? '' : <p>- có {quality[4]} chuối tốt</p>}
-                                {quality[5] === undefined ? '' : <p>- có {quality[5]} cam tốt</p>}
+                                <p>Không phát hiện được đối tượng</p>
                             </div>
+                        ) : (
+                            quality && (
+                                <div>
+                                    {quality[0] === undefined ? '' : <p>- có {quality[0]} táo hư</p>}
+                                    {quality[1] === undefined ? '' : <p>- có {quality[1]} chuối hư</p>}
+                                    {quality[2] === undefined ? '' : <p>- có {quality[2]} cam hư</p>}
+                                    {quality[3] === undefined ? '' : <p>- có {quality[3]} táo tốt</p>}
+                                    {quality[4] === undefined ? '' : <p>- có {quality[4]} chuối tốt</p>}
+                                    {quality[5] === undefined ? '' : <p>- có {quality[5]} cam tốt</p>}
+                                </div>
+                            )
                         )}
                     </div>
                 </div>
